@@ -1,0 +1,33 @@
+﻿@model List<School>
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8" />
+    <title>المنتجات</title>
+    <style>
+        body { font-family: Tahoma; padding: 20px; background: #f5f5f5; }
+        h2 { color: #333; }
+        ul { list-style: none; padding: 0; }
+        li { background: white; margin: 10px 0; padding: 10px;
+             border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body dir="rtl">
+    <h2> قائمة الطلبة</h2>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.Id</li>
+            <li>@item.title</li>
+            <li>@item.description</li>
+			<li>@item.Date</li>
+            <li>@item.location</li>
+            <li>@item.city</li>
+            <hr />
+
+
+        }
+    </ul>
+</body>
+</html>
